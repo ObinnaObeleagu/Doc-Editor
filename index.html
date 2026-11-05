@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1f6feb">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Doc Editor</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <button id="open-btn" class="primary">Open</button>
+  <span id="file-name">No file open</span>
+  <button id="save-btn" disabled>Save</button>
+</header>
+<nav id="tools" hidden></nav>
+<main id="view">
+  <p class="hint">Open a PDF, Word (.docx), PowerPoint (.pptx), Excel (.xlsx, .xls, .ods), CSV, or text file. Files are processed on this device and never uploaded.</p>
+</main>
+<footer id="status"></footer>
+<input type="file" id="file-input" hidden
+  accept=".pdf,.docx,.docm,.dotx,.pptx,.pptm,.potx,.xlsx,.xlsm,.xls,.ods,.csv,.tsv,.txt,.md,.markdown,.json,.xml,.html,.htm,.css,.js,.log,.yaml,.yml,.ini,.png,.jpg,.jpeg,.gif,.webp,.doc,.dot,.ppt,.pot,.pps">
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="vendor/jszip.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
